@@ -27,7 +27,7 @@ class SphinxController
   end
 
   def start
-    config.controller.start
+    puts config.controller.start
   end
 
   def stop
