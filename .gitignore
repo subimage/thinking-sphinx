@@ -10,3 +10,4 @@ spec/internal/db/sphinx
 spec/internal/tmp/*
 !spec/internal/tmp/.gitkeep
 _site
+vendor

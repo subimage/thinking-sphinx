@@ -46,5 +46,13 @@ describe ThinkingSphinx::ActiveRecord::Callbacks::DeleteCallbacks do
 
       callbacks.after_destroy
     end
+
+    it 'does nothing if callbacks are suspended' do
+      ThinkingSphinx::Callbacks.suspend!
+      ThinkingSphinx::Deletion.should_not_receive(:perform)
+      callbacks.after_destroy
+      ThinkingSphinx::Callbacks.resume!
+    end
+
   end
 end
